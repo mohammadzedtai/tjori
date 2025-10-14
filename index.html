@@ -1,157 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> mohammad zed</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tjore | Saagah</title>
 
-    body {
-      font-family: sans-serif;
-    }
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    header {
-      position: sticky;
-      top: 0; 
-      z-index: 1000;
-      background-color: antiquewhite;
-    }
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    nav {
-      width: 100%;
-      height: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 5%;
-      color: black;
-      flex-wrap: wrap;
-    }
+      body {
+        font-family: sans-serif;
+      }
 
-    .button-1,
-    .button-2 {
-      width: 80px;
-      height: 35px;
-      border-radius: 5px;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
-    }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: rgb(231, 217, 178);
+      }
 
-    .button-1 {
-      background-color: black;
-      color: white;
-    }
-
-    .button-2 {
-      background-color: rgba(236, 193, 94, 0.809);
-      color: black;
-    }
-
-    .nav-1 {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .nav-2 {
-      flex: 1;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    .nav-3 ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 850px) {
       nav {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px 15px;
-        gap: 10px;
-      }
-
-      .nav-1, .nav-2, .nav-3 {
         width: 100%;
-        justify-content: space-between;
-      }
-
-      .nav-2 {
-        text-align: center;
-        font-weight: 100;
-        padding-top: 10px;
-        font-size: 17px;
-
-      }
-
-       .nav-3 {
-        text-align: center;
-        display: none;
-      }
-      
-      .nav-3 ul {
-        gap: 10px;
-        margin-top: 5px;
+        padding: 10px 5%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
       }
-    }
 
-    @media (max-width: 450px) {
-      .button-1, .button-2 {
-        width: 70px;
-        height: 30px;
-        font-size: 12px;
+      .nav-top {
+        height: 60px;
       }
 
-      .nav-2 {
-        display: none;
+      .nav-bottom {
+        background-color: rgb(37, 33, 30);
+        color: bisque;
       }
 
-      .nav-3 {
-        display: block;
+      .button-1,
+      .button-2 {
+        width: 80px;
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
       }
-      .nav-3 ul{
-        font-size: 15px;
-        gap: 30px;
-      }
-      .nav-3 ul>li:hover{
-        color: rgba(255, 127, 80, 0.838);
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <div class="nav-1">
-        <button class="button-1">Tjore</button>
-        <button class="button-2">Saagah</button>
-      </div>
 
-      <div class="nav-2">
-        <p>FREE SHIPPING ON ORDERS ABOVE ₹1499</p>
-      </div>
+      .button-1 {
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+      }
 
-      <div class="nav-3">
-        <ul>
-          <li>Wishlist</li>
-          <li>Blog</li>
-          <li>Track Order</li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-</body>
+      .button-2 {
+        background-color: rgb(231, 217, 178);
+        color: black;
+        border: 1px solid black;
+      }
+      .button-1:hover {
+        background-color: aliceblue;
+        color: black;
+      }
+      .button-2:hover {
+        background-color: bisque;
+        color: white;
+      }
+      .button-icon {
+        background-color: rgb(231, 217, 178);
+        width: 45px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        border: none;
+      }
+
+      .nav-left,
+      .nav-center,
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .nav-center {
+        flex: 1;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      .nav-right ul,
+      .nav-menu ul,
+      .nav-account ul {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+      }
+
+      .nav-menu ul {
+        justify-content: center;
+      }
+
+      .nav-menu ul li:hover,
+      .nav-right ul li:hover,
+      .nav-account ul li:hover {
+        color: coral;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      select.country-select {
+        padding: 5px 10px;
+        font-size: 14px;
+        border: 2px solid black;
+        border-radius: 4px;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      @media (max-width: 850px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 15px;
+          gap: 10px;
+        }
+
+        .nav-center {
+          text-align: center;
+          width: 100%;
+          padding-top: 10px;
+          font-size: 17px;
+        }
+
+        .nav-right ul,
+        .nav-account ul {
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .nav-menu ul {
+          justify-content: center;
+          gap: 15px;
+        }
+      }
+
+      @media (max-width: 450px) {
+        .button-1,
+        .button-2 {
+          width: 70px;
+          height: 30px;
+          font-size: 12px;
+        }
+
+        .nav-center {
+          display: none;
+        }
+
+        .nav-menu ul {
+          font-size: 15px;
+          gap: 20px;
+        }
+
+        .nav-menu ul li:hover {
+          color: rgba(255, 127, 80, 0.838);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Top Navigation -->
+      <nav class="nav-top">
+        <div class="nav-left">
+          <button class="button-1">Tjore</button>
+          <button class="button-2">Saagah</button>
+        </div>
+
+        <div class="nav-center">
+          <p>FREE SHIPPING ON ORDERS ABOVE ₹1499</p>
+        </div>
+
+        <div class="nav-right">
+          <ul>
+            <li>Wishlist</li>
+            <li>Blog</li>
+            <li>Track Order</li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Bottom Navigation -->
+      <nav class="nav-bottom">
+        <div class="nav-left">
+          <i class="fa-solid fa-globe"></i>
+          <select class="country-select">
+            <option value="india">India</option>
+            <option value="pakistan">Pakistan</option>
+            <option value="iran">Iran</option>
+            <option value="iraq">Iraq</option>
+            <option value="china">China</option>
+          </select>
+        </div>
+
+        <div class="nav-center">
+          <img src="./download.png" width="200px" alt="Brand Logo" />
+        </div>
+
+        <div class="nav-account">
+          <ul>
+            <li>Account</li>
+            <li>Search</li>
+            <li>Cart(1)</li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Menu Navigation -->
+      <nav class="nav-bottom nav-menu">
+        <div class="nav-center">
+          <ul>
+            <li>FESTIVITIES</li>
+            <li>OFFERS</li>
+            <li>JUST IN</li>
+            <li>CRAFT STORIES</li>
+            <li>WOMEN</li>
+            <li>MEN</li>
+            <li>KIDS</li>
+            <li>URTTH</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
